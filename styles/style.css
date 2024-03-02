@@ -172,6 +172,7 @@
 }
 
 .content-card__description {
+  font-variation-settings: 'wght' var(--text-weight);
   display: flex;
   flex-direction: column;
   gap: 27px;
