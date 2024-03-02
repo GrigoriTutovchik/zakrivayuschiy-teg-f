@@ -193,7 +193,6 @@
   border: 2px solid var(--accent-color);
   padding: 10px 17px;
   overflow: hidden;
-  color: #fff;
   color: var(--button-color);
   font-family: var(--accent-fonts);
   font-size: 14px;
