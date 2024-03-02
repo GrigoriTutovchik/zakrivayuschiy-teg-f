@@ -28,7 +28,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-variation-settings: 'wght' var(--header-weight);
+  font-weight: var(--text-weight, 400);
 }
 
 .header {
@@ -74,6 +74,7 @@
   border: none;
   text-transform: uppercase;
   background-color: transparent;
+  transition: opacity .3s ease;
 }
 
 .theme-menu__button::before {
@@ -91,6 +92,10 @@
   background: var(--accent-color);
   block-size: 2px;
   inline-size: calc(100% - 25px);
+  opacity: 1;
+  transition: transform .3s ease;
+  transform: scale(0);
+  transform-origin: left;;
 }
 
 .theme-menu__button:hover,
@@ -98,7 +103,7 @@
 .theme-menu__button:focus-visible,
 .theme-menu__button:disabled {
   outline: none;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 .theme-menu__button:disabled::before {
@@ -107,13 +112,6 @@
 
 .theme-menu__button:disabled::before {
   animation: menu-button .5s infinite ease-in-out alternate;
-}
-
-.theme-menu__button::after {
-  opacity: 1;
-  transition: transform .3s ease;
-  transform: scale(0);
-  transform-origin: left;;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -138,9 +136,9 @@
 
 .content-card__title {
   padding: 3px 10px;
-  font-weight: 700;
   font-size: 18px;
   line-height: 21.78px;
+  font-weight: var(--header-weight);
 }
 
 .content-card__image {
@@ -178,6 +176,8 @@
   flex-direction: column;
   gap: 27px;
   padding: 1.5625rem;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .content-card__buttons {
@@ -193,6 +193,13 @@
   overflow: hidden;
   color: #fff;
   transition: box-shadow .3s ease;
+  border: 2px solid var(--accent-color);
+  padding: 10px 17px;
+  font-family: var(--accent-fonts);
+  font-size: 14px;
+  line-height: 12.6px;
+  background-color: transparent;
+  color: var(--accent-color);
 }
 
 .shadow-button:focus-visible {
@@ -204,12 +211,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0;
   background: var(--accent-color);
-  transition: opacity .5s ease-in-out;
-}
-
-.shadow-button::after {
   opacity: 1;
   transition: transform .5s ease-in-out;
   transform: translateX(-100%);
@@ -233,15 +235,10 @@
 .card__icon-button {
   border: 2px solid transparent;
   background-color: transparent;
+  transition: border-color .3s ease;
 }
 
 .card__like-button {
-  border: 2px solid var(--accent-color);
-  padding: 10px 17px;
-  font-family: var(--accent-fonts);
-  font-size: 14px;
-  line-height: 12.6px;
-  background-color: transparent;
   inline-size: 130px;
 }
 
@@ -253,7 +250,6 @@
 
 .content-save__button {
   margin-block-end: 105px;
-  border: 2px solid var(--accent-color);
 }
 
 .save-button {
@@ -262,10 +258,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  border: none;
   padding: 15px 18px;
-  font-family: var(--accent-fonts);
-  font-size: 14px;
   line-height: 12.6px;
   background-color: var(--bg-color);
   max-inline-size: clamp(19.125rem, 17.0337rem + 8.9231vw, 20.9375rem);
@@ -321,11 +314,9 @@
 }
 
 .close-button {
-  border: 2px solid var(--accent-color);
   padding-block-start: 12.5px;
   padding-block-end: 12.5px ;
   text-transform: uppercase;
-  background-color: transparent;
   inline-size: 100%;
 }
 
@@ -367,7 +358,7 @@
 
 @supports ((text-stroke: 1px var(--bg-color)) or (-webkit-text-stroke: 1px var(--bg-color))) {
 
-  .image-label {
+  .card-label {
       text-shadow: none;
       -webkit-text-stroke: 1px var(--bg-color);
       text-stroke: 1px var(--bg-color);

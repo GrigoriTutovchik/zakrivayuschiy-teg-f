@@ -20,7 +20,7 @@
   }
 
   to {
-    translate: -5px;
+    translate: -4px;
   }
 }
 
@@ -48,7 +48,7 @@
 
 .like-icon .contour {
   fill: var(--heart-contour-color);
-  transition: fill .3s linear;;
+  transition: fill .1s linear;;
 }
 
 .like-icon .main-body {
@@ -58,7 +58,7 @@
 
 .like-icon .core {
   fill: transparent;
-  transition: fill .3s linear;;
+  transition: fill .3s .03s linear;
 }
 
 .like-icon .sparks {
