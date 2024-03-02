@@ -20,7 +20,7 @@
   align-items: center;
   color: var(--accent-color);
   font-family: var(--main-fonts),sans-serif;
-  font-weight: var(--text-weight, 400);
+  font-variation-settings: 'wght' var(--text-weight);
   background-color: var(--bg-color);
   background-image: var(--bg-image);
   background-repeat: no-repeat;
@@ -136,7 +136,7 @@
 
 .content-card__title {
   padding: 3px 10px;
-  font-weight: var(--header-weight);
+  font-variation-settings: 'wght' var(--header-font-weight);
   font-size: 18px;
   line-height: 21.78px;
 }
