@@ -15,4 +15,5 @@
   --title-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
   --heart-contour-color: #000;
   --heart-main-color: #f00;
+  --button-color: #fff;
 }
