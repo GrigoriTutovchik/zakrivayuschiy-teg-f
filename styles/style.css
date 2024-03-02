@@ -29,6 +29,7 @@
   background-attachment: fixed;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-size: 18px;
 }
 
 .header {
@@ -137,7 +138,6 @@
 .content-card__title {
   padding: 3px 10px;
   font-variation-settings: 'wght' var(--header-font-weight);
-  font-size: 18px;
   line-height: 21.78px;
 }
 
@@ -176,7 +176,6 @@
   flex-direction: column;
   gap: 27px;
   padding: 1.5625rem;
-  font-size: 18px;
   line-height: 21px;
 }
 
