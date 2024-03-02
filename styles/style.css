@@ -139,6 +139,7 @@
   padding: 3px 10px;
   font-variation-settings: 'wght' var(--header-font-weight);
   line-height: 21.78px;
+  font-size: 18px;
 }
 
 .content-card__image {
